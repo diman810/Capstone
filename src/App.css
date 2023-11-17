@@ -1,38 +1,51 @@
-.App {
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 1rem 5%;
+  font-family: "Karla", "MarkaziText", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+header {
+  display: flex;
+  justify-content:center;
+}
+
+nav ul {
+  list-style: none;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav li {
+  display: inline-block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav li>a {
+ /* margin-bottom: 0.4rem;*/
+  text-decoration: none;
+  padding: 0.3rem 0.5rem;
+  display: block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+section {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header section {
+  display: flex;
+  align-items:center;
+}
+
+nav li>a:hover {
+  text-decoration: underline;
 }

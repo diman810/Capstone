@@ -1,12 +1,13 @@
 import Nav from './Nav'
-import logo from"../assets/Logo.svg"
+import logo from "../assets/Logo.svg"
 function Header(props) {
     return (
-      <header>
-        <img src={logo} alt="Logo" height={76}px/>
-        <p>Header</p>
-        <Nav />
-      </header>
+        <header>
+            <section>
+                <img src={logo} alt="Logo" width={208+"px"} />
+                <Nav />
+            </section>
+        </header>
     )
-  }
-  export default Header;
+}
+export default Header;

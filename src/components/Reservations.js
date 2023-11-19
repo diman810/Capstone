@@ -1,15 +1,17 @@
 import Header from './Header'
 import Main from './Main'
 import Footer from './Footer'
+import BookingForm from './BookingForm'
 
 function Reservations() {
   return (
     <>
-    <Header />
-    <div>Reservations</div>
-    <Main />
-    <Footer />
-</>
+      <Header />
+      <Main>
+        <BookingForm />
+      </Main>
+      <Footer />
+    </>
   )
 }
 

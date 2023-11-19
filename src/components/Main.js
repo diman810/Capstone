@@ -1,7 +1,7 @@
 function Main(props) {
     return (
       <main>
-        Main
+        {props.children}
       </main>
     )
   }

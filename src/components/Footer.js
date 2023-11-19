@@ -1,24 +1,30 @@
 import Nav from './Nav'
+import logo from "../assets/logo-second.png"
 function Footer(props) {
-    return (
-      <footer>
-        <section>
-            <h6>Doormate Navigation</h6>
-            <Nav/>
+  return (
+    <footer>
+      <div className='footer-container'>
+        <section className='logo'>
+          <img className='logo1' src={logo} alt="Logo" height={279 + "px"} />
         </section>
-        <section>
-            <h6>Contacts</h6>
-            <p>Adress</p>
-            <p>phone number</p>
-            <p>email</p>
+        <section className='menu'>
+          <h6>Doormate Navigation</h6>
+          <Nav />
         </section>
-        <section>
-            <h6>Social Media Links</h6>
-            <p>Adress</p>
-            <p>phone number</p>
-            <p>email</p>
+        <section className='contacts'>
+          <h6>Contacts</h6>
+          <p>Adress</p>
+          <p>phone number</p>
+          <p>email</p>
         </section>
-      </footer>
-    )
-  }
-  export default Footer;
+        <section className='media'>
+          <h6>Social Media Links</h6>
+          <p>Adress</p>
+          <p>phone number</p>
+          <p>email</p>
+        </section>
+      </div>
+    </footer>
+  )
+}
+export default Footer;

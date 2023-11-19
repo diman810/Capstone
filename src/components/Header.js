@@ -3,7 +3,7 @@ import logo from "../assets/Logo.svg"
 function Header(props) {
     return (
         <header>
-            <section>
+            <section className="sec-head">
                 <img src={logo} alt="Logo" width={208+"px"} />
                 <Nav />
             </section>

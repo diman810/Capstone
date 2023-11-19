@@ -1,13 +1,16 @@
 import Header from './Header'
 import Main from './Main'
 import Footer from './Footer'
-
+import Promo from './Promo'
+import Specials from './Specials'
 function Homepage(props) {
     return (
         <>
             <Header />
-            <div>Homepage</div>
-            <Main />
+            <Main>
+                <Promo />
+                <Specials />
+            </Main>
             <Footer />
         </>
     )

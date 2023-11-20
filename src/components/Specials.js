@@ -1,4 +1,5 @@
 import Card from "./Card";
+import { Link } from 'react-router-dom';
 
 const specials = [
   {
@@ -28,8 +29,10 @@ const Specials = () => {
   return (
     <section className="specials">
       <div className="top">
-          <h2 className="sub-title">This week specials!</h2>
+        <h2 className="sub-title">This week specials!</h2>
+        <Link to="/menu" className="nav-item">
           <button className="primary-back2 primary-btn1" type="button">Online Menu</button>
+        </Link>
       </div>
       <div className="special-cards">
         {specials.map((special) => {

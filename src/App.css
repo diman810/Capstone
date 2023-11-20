@@ -293,6 +293,43 @@ footer ul{
 .form-container {
   display: flex;
   justify-content: center;
+  padding: 5rem;
+}
+
+.booking-confirmation {
+  min-width: 420px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+}
+
+.booking-confirmation h6 {
+  padding : 1rem 0 1rem 0;
+}
+
+.booking-confirmation p {
+  padding : 0 0 2rem 0;
+}
+
+.booking-confirmation button {
+  margin : 1rem 1rem 1rem 1rem;
+}
+
+.booking-confirmation a{
+  display: flex;
+  justify-content: center;
+}
+
+.primary-back1.primary-btn1:hover {
+  color:#EFEFEF;
+  background-color: #394e47;
+}
+
+.primary-back2.primary-btn1:hover {
+  color: #101010;
+  background-color: #E4BE04;
 }
 
 .input {
@@ -329,6 +366,9 @@ input[type='date'].input {
   font-weight: 400;
 }
 
+label {
+  font-size: 16pt;
+}
 
 
 @media (width <=57rem) {

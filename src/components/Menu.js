@@ -1,5 +1,5 @@
 import Header from './Header'
-import Main from './Main'
+import MainHEl from './MainHEl'
 import Footer from './Footer'
 
 export default function Menu() {
@@ -7,7 +7,7 @@ export default function Menu() {
         <>
             <Header />
             <div>Menu</div>
-            <Main />
+            <MainHEl />
             <Footer />
         </>
     )

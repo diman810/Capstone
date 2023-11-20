@@ -1,5 +1,5 @@
 import Header from './Header'
-import Main from './Main'
+import MainHEl from './MainHEl'
 import Footer from './Footer'
 
 function About(props) {
@@ -7,7 +7,7 @@ function About(props) {
         <>
             <Header />
             <div>About</div>
-            <Main />
+            <MainHEl />
             <Footer />
         </>
     )

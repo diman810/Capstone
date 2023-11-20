@@ -1,14 +1,16 @@
 import Header from './Header'
-import Main from './Main'
+import Main from './MainHEl'
 import Footer from './Footer'
 import BookingForm from './BookingForm'
+import React from 'react'
 
-function Reservations() {
+function Reservations(props) {
+  // const [availableTime, dispatch] = React.useReducer(reducer, []);
   return (
     <>
       <Header />
       <Main>
-        <BookingForm />
+        <BookingForm {...props}/>
       </Main>
       <Footer />
     </>

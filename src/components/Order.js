@@ -1,5 +1,5 @@
 import Header from './Header'
-import Main from './Main'
+import MainHEl from './MainHEl'
 import Footer from './Footer'
 
 function Order(props) {
@@ -7,7 +7,7 @@ function Order(props) {
         <>
             <Header />
             <div>Order</div>
-            <Main />
+            <MainHEl />
             <Footer />
         </>
     )

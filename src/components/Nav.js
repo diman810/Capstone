@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 function Nav(props) {
     return (
-      <nav>
+      <nav aria-label="navigation menu">
         <ul>
           <li><Link to="/" className="nav-item">Home</Link></li>
           <li><Link to="/about" className="nav-item">About</Link></li>

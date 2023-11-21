@@ -38,7 +38,7 @@ describe("Renders the BookingForm", () => {
     const clear = false;
     const loading = false;
     const setDate = jest.fn();
-    const submitForm = jest.fn((data) => console.log("I was called",data));
+    const submitForm = jest.fn(/*(data) => console.log("I was called",data)*/);
     const setClear = jest.fn();
     let dom;
     await act(async () => {
@@ -70,7 +70,7 @@ describe("Renders the BookingForm", () => {
     const clear = false;
     const loading = false;
     const setDate = jest.fn();
-    const submitForm = jest.fn((data) => console.log("I was called",data));
+    const submitForm = jest.fn(/*(data) => console.log("I was called",data)*/);
     const setClear = jest.fn();
     let dom;
     await act(async () => {
@@ -135,20 +135,6 @@ describe("Renders the Reservations", () => {
     const rangeInput1 = getById(dom.container, 'guests');
     expect(rangeInput1.value).toBe('5');
   })
-  /*
-  test('Renders the Reservations and check localstorage', () => {
-
-    console.log('Renders the Reservations after set localstorage');
-    const date = getTodayDateValue();
-    const availableTime = initTime(['12:30', '13:40']);
-    const setDate = jest.fn();
-    const dom = render(<BrowserRouter><Reservations availableTime={availableTime} date={date} setDate={setDate} /></BrowserRouter>);
-    const getById = queryByAttribute.bind(null, 'id');
-    const rangeInput = getById(dom.container, 'guests');
-    expect(rangeInput.value).toBe('5');
-
-  })
-    */
 });
 
 

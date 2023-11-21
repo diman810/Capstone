@@ -12,7 +12,7 @@ import { fetchAPI, submitAPI } from '../utils/fetch'
 import { useNavigate } from "react-router-dom";
 
 function reducer(state, action) {
-    console.log('reducer', state, action);
+    // console.log('reducer', state, action);
     switch (action.type) {
         case 'set':
             return initTime(action.payload);
@@ -28,7 +28,7 @@ function initTime(state) {
     if (state !== undefined && state !== null && state.length !== 0) {
         isset = true;
     }
-    console.log('initTime', state, isset);
+    // console.log('initTime', state, isset);
     return { isSet: isset, times: state };
 }
 
@@ -38,40 +38,40 @@ function Main() {
     const [date, setDate] = React.useState(getTodayDateValue());
     const [clear, setClear] = React.useState(false);
     const [loading, setLoading] = React.useState(false);
-    console.log('onMain clear=',clear);
+    // console.log('onMain clear=',clear);
     const navigate = useNavigate();
     function submitForm(formData) {
-        console.log('onSubmit', formData);
+        // console.log('onSubmit', formData);
         submitAPI(formData).then((data) => {
-            console.log("formSubmitted:", data);
+            // console.log("formSubmitted:", data);
             navigate("/confirm");
             setClear(true);
         },
             (data) => {
-                console.log("reject formSubmitted:", data);
+                // console.log("reject formSubmitted:", data);
             }
         )
        // e.preventDefault();
     }
-    console.log('Before reservation render', availableTime);
+    // console.log('Before reservation render', availableTime);
 
     React.useEffect(() => {
-        console.log("before");
+        // console.log("before");
         setLoading(true);
         fetchAPI(date).then((data) => {
             // setTime([...data]);
             dispatch({ type: 'set', payload: [...data] })
-            console.log("availableTime:", data);
+            // console.log("availableTime:", data);
             setLoading(false);
         },
             (data) => {
                 dispatch({ type: 'reset' });
-                console.log("reject availableTime:", data);
+                // console.log("reject availableTime:", data);
                 setLoading(false);
             }
         )
         //    .catch((error) => console.log(error));
-        console.log("after");
+        // console.log("after");
     }, [date]);
     return (
         <>

@@ -1,5 +1,5 @@
 import Header from './Header'
-import Main from './MainHEl'
+import MainHEl from './MainHEl'
 import Footer from './Footer'
 import BookingForm from './BookingForm'
 import React from 'react'
@@ -9,9 +9,9 @@ function Reservations(props) {
   return (
     <>
       <Header />
-      <Main>
+      <MainHEl>
         <BookingForm {...props}/>
-      </Main>
+      </MainHEl>
       <Footer />
     </>
   )

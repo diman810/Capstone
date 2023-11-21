@@ -37,9 +37,10 @@ function Main() {
     const [availableTime, dispatch] = React.useReducer(reducer, [], initTime);
     const [date, setDate] = React.useState(getTodayDateValue());
     const [clear, setClear] = React.useState(false);
+    const [loading, setLoading] = React.useState(false);
     console.log('onMain clear=',clear);
     const navigate = useNavigate();
-    function submitForm(e, formData) {
+    function submitForm(formData) {
         console.log('onSubmit', formData);
         submitAPI(formData).then((data) => {
             console.log("formSubmitted:", data);
@@ -50,22 +51,23 @@ function Main() {
                 console.log("reject formSubmitted:", data);
             }
         )
-        e.preventDefault();
+       // e.preventDefault();
     }
     console.log('Before reservation render', availableTime);
 
-
-
     React.useEffect(() => {
         console.log("before");
+        setLoading(true);
         fetchAPI(date).then((data) => {
             // setTime([...data]);
             dispatch({ type: 'set', payload: [...data] })
             console.log("availableTime:", data);
+            setLoading(false);
         },
             (data) => {
                 dispatch({ type: 'reset' });
                 console.log("reject availableTime:", data);
+                setLoading(false);
             }
         )
         //    .catch((error) => console.log(error));
@@ -77,7 +79,7 @@ function Main() {
                 <Route path="/" element={<Homepage />}></Route>
                 <Route path="/about" element={<About />}></Route>
                 <Route path="/menu" element={<Menu />}></Route>
-                <Route path="/reservations" element={<Reservations availableTime={availableTime} date={date} setDate={setDate} onSubmit={submitForm} needClear={clear} setClear={setClear}/>}></Route>
+                <Route path="/reservations" element={<Reservations availableTime={availableTime} date={date} setDate={setDate} onSubmit={submitForm} needClear={clear} setClear={setClear} loading={loading}/>}></Route>
                 <Route path="/order" element={<Order />}></Route>
                 <Route path="/login" element={<Login />}></Route>
                 <Route path="/confirm" element={<ConfirmedBooking />}></Route>

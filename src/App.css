@@ -274,8 +274,13 @@ footer ul{
 
 .booking-form {
   display: grid;
-  max-width: 420px;
+  max-width: 400px;
   border-radius: 16px;
+}
+
+.booking-form .sub-title {
+  margin: 1rem 1rem 0 1.4rem;
+  font-size: 44pt;
 }
 
 .booking-form>*{
@@ -297,7 +302,7 @@ footer ul{
 }
 
 .booking-confirmation {
-  min-width: 420px;
+  min-width: 400px;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
@@ -334,7 +339,7 @@ footer ul{
 
 .input {
   height: 40px;
-  width: 365px;
+  width: 345px;
   font-size: 16pt;
   border-radius: 16px;
   border: 1px solid #495e57;
@@ -343,7 +348,7 @@ footer ul{
 
 select.input {
   padding-left: 10px;
-  width: 375px;
+  width: 355px;
   font-weight: 400;
   -moz-appearance:none; /* Firefox */
   -webkit-appearance:none; /* Safari and Chrome */
@@ -362,7 +367,7 @@ input[type='number'].input {
 input[type='date'].input {
   padding-left: 10px;
   padding-right: 10px;
-  width: 355px;
+  width: 335px;
   font-weight: 400;
 }
 
@@ -370,7 +375,10 @@ label {
   font-size: 16pt;
 }
 
-
+.inline-error {
+  color: red;
+  margin-top: 0.5rem;
+}
 @media (width <=57rem) {
   .promo {
     background: linear-gradient(180deg, #495e57 90%, #FFFFFF 10%);

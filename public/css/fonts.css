@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "MarkaziText";
+  src: url("../fonts/MarkaziText-VariableFont_wght.woff2") format("woff2-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url("../fonts/Karla-VariableFont_wght.woff2") format("woff2-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "KarlaItalic";
+  src: url("../fonts/Karla-Italic-VariableFont_wght.woff2") format("woff2-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: italic;
+}

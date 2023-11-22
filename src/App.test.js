@@ -61,7 +61,7 @@ describe("Renders the BookingForm", () => {
       fireEvent.submit(headingElement);
     });
     expect(submitForm).toHaveBeenCalledTimes(1);
-    expect(submitForm).toHaveBeenLastCalledWith({ time: '13:40', guests: 5, occasion: 'Birthday', date: '2023-11-21' });
+    expect(submitForm).toHaveBeenLastCalledWith({ time: '13:40', guests: 5, occasion: 'Birthday', date: date });
   })
 
   test('Form input validation', async () => {

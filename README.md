@@ -8,3 +8,4 @@ npm start
 ## Test project
 npm install
 npm test
+Press a to force all tests
